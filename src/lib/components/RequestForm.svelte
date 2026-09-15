@@ -3,7 +3,7 @@
 
   // Paste your deployed Google Apps Script Web App URL here.
   // Setup: see google-apps-script.gs at the repo root.
-  const SHEETS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwmTcu5zPeKjK7v0tQNwYQiRtKU-HfnzQqQ7aBXMC86ENC12nN84PK8CZCrWw_NRWFy/exec';
+  const SHEETS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzDwLh-Zc8gPF486TyYWfu7ESQoqr7n9GqsoB4FzN0CPp4Eh7WzhQhymNOUsCzzAiHQ/exec';
 
   const businessTypes = [
     'Online Store',
@@ -23,6 +23,7 @@
   let businessType = $state(businessTypes[0]);
   let message = $state('');
   let status: 'idle' | 'sending' | 'success' | 'error' = $state('idle');
+  let lastSubmittedEmail: string | null = null;
 
   let fullNameInput: HTMLInputElement;
   let emailInput: HTMLInputElement;
@@ -55,6 +56,12 @@
     }
     status = 'sending';
 
+    const normalizedEmail = email.trim().toLowerCase();
+    if (lastSubmittedEmail === normalizedEmail) {
+      status = 'success';
+      return;
+    }
+
     const payload = {
       fullName: fullName.trim(),
       email: email.trim(),
@@ -77,11 +84,13 @@
       // The sheet row is already written server-side before the redirect, so a
       // redirect response = success. Only fail on a genuine direct response.
       if (res.type === 'opaqueredirect') {
+        lastSubmittedEmail = normalizedEmail;
         status = 'success';
         resetForm();
         return;
       }
       if (!res.ok) throw new Error(`Request failed with status ${res.status}`);
+      lastSubmittedEmail = normalizedEmail;
       status = 'success';
       resetForm();
     } catch (err) {

@@ -40,6 +40,15 @@ function doPost(e) {
     data = e.parameter;
   }
 
+  var email = String(data.email || '').trim().toLowerCase();
+
+  // Dedupe: skip the insert if the same email already exists (column 3 = Email).
+  if (email && isDuplicate_(sheet, email)) {
+    return ContentService
+      .createTextOutput(JSON.stringify({ status: 'duplicate' }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
   sheet.appendRow([
     new Date(),
     data.fullName || '',
@@ -53,6 +62,18 @@ function doPost(e) {
   return ContentService
     .createTextOutput(JSON.stringify({ status: 'ok' }))
     .setMimeType(ContentService.MimeType.JSON);
+}
+
+function isDuplicate_(sheet, email) {
+  var lastRow = sheet.getLastRow();
+  if (lastRow < 2) return false;
+  var existing = sheet.getRange(2, 3, lastRow - 1, 1).getValues();
+  for (var i = 0; i < existing.length; i++) {
+    if (String(existing[i][0] || '').trim().toLowerCase() === email) {
+      return true;
+    }
+  }
+  return false;
 }
 
 function getOrCreateSheet_(name) {
