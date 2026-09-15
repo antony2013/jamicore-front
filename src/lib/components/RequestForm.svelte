@@ -49,7 +49,7 @@
   async function handleSubmit(event: SubmitEvent) {
     event.preventDefault();
     if (status === 'sending') return;
-    if (!fullName.trim() || !email.trim() || !message.trim()) {
+    if (!fullName.trim() || !email.trim() || !phone.trim() || !message.trim()) {
       status = 'error';
       return;
     }
@@ -68,10 +68,19 @@
     try {
       const res = await fetch(SHEETS_ENDPOINT, {
         method: 'POST',
-        redirect: 'follow',
+        redirect: 'manual',
         headers: { 'Content-Type': 'text/plain;charset=utf-8' },
         body: JSON.stringify(payload),
       });
+      // Apps Script redirects responses through script.googleusercontent.com
+      // (returns "opaqueredirect"), and the echo redirect can 404 in browsers.
+      // The sheet row is already written server-side before the redirect, so a
+      // redirect response = success. Only fail on a genuine direct response.
+      if (res.type === 'opaqueredirect') {
+        status = 'success';
+        resetForm();
+        return;
+      }
       if (!res.ok) throw new Error(`Request failed with status ${res.status}`);
       status = 'success';
       resetForm();
@@ -142,8 +151,9 @@
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div>
-              <label for="rf-phone" class="block text-[13px] font-semibold text-text-primary mb-1.5">Phone</label>
+              <label for="rf-phone" class="block text-[13px] font-semibold text-text-primary mb-1.5">Phone *</label>
               <input bind:value={phone} id="rf-phone" type="tel" placeholder="+1 555 000 0000"
+                required
                 class="w-full px-4 py-3 rounded-xl border border-border-strong bg-white text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-brand-gold/40 focus:border-brand-gold transition-all" />
             </div>
             <div>
