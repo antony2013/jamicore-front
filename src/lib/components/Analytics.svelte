@@ -1,4 +1,4 @@
-<script lang="ts">
+﻿<script lang="ts">
   import { onMount } from 'svelte';
 
   let visible = $state(false);
@@ -14,9 +14,9 @@
   });
 
   const metrics = [
-    { label: 'Orders Today', value: '48', sub: 'across all channels', icon: 'bg-blue-500' },
-    { label: 'Products Active', value: '126', sub: 'in catalog', icon: 'bg-violet' },
-    { label: 'Customers', value: '1,240', sub: 'in database', icon: 'bg-brand-green' },
+    { label: 'Orders Today', value: '48', sub: 'across all channels', icon: 'bg-amber-600' },
+    { label: 'Products Active', value: '126', sub: 'in catalog', icon: 'bg-amber-600' },
+    { label: 'Customers', value: '1,240', sub: 'in database', icon: 'bg-brand-gold' },
     { label: 'Inventory Items', value: '340', sub: 'tracked', icon: 'bg-amber-500' },
   ];
 
@@ -47,7 +47,7 @@
           <span class="text-[12px] font-semibold text-text-muted">Analytics Overview</span>
           <div class="ml-auto flex gap-1">
             {#each ['Week', 'Month', 'Quarter'] as period, i}
-              <button class="px-3 py-1.5 text-[11px] font-semibold rounded-full transition-all {i === 0 ? 'bg-deep-navy text-white' : 'text-text-muted hover:bg-surface'}">{period}</button>
+              <button class="px-3 py-1.5 text-[11px] font-semibold rounded-full transition-all {i === 0 ? 'bg-deep-dark text-white' : 'text-text-muted hover:bg-surface'}">{period}</button>
             {/each}
           </div>
         </div>
@@ -70,7 +70,7 @@
             <div class="flex items-end gap-2 h-36">
               {#each barData as bar}
                 <div class="flex-1 flex flex-col items-center gap-1.5">
-                  <div class="w-full rounded-t-lg bg-gradient-to-t from-brand-green to-emerald-400" style="height: {bar.height};"></div>
+                  <div class="w-full rounded-t-lg bg-gradient-to-t from-brand-gold to-amber-400" style="height: {bar.height};"></div>
                   <span class="text-[10px] font-medium text-text-muted">{bar.label}</span>
                 </div>
               {/each}

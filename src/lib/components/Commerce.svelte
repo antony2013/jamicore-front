@@ -1,4 +1,4 @@
-<script lang="ts">
+﻿<script lang="ts">
   import { onMount } from 'svelte';
 
   let visible = $state(false);
@@ -32,18 +32,18 @@
             <div class="flex gap-2">
               <div class="w-3 h-3 rounded-full bg-red-400/80"></div>
               <div class="w-3 h-3 rounded-full bg-amber-400/80"></div>
-              <div class="w-3 h-3 rounded-full bg-green-400/80"></div>
+              <div class="w-3 h-3 rounded-full bg-amber-400/80"></div>
             </div>
             <span class="text-[12px] font-semibold text-text-muted ml-3">Online Store</span>
           </div>
           <div class="product-ui-body">
             <div class="flex items-center justify-between mb-4">
               <span class="text-[13px] font-bold text-text-primary">Products</span>
-              <span class="text-[11px] font-semibold text-brand-green uppercase tracking-wider">Storefront</span>
+              <span class="text-[11px] font-semibold text-brand-gold uppercase tracking-wider">Storefront</span>
             </div>
             <div class="space-y-2.5">
               {#each [{ name: 'Classic Essentials', items: 24, status: 'Active' }, { name: 'Seasonal Collection', items: 18, status: 'Active' }, { name: 'Premium Selection', items: 12, status: 'Draft' }] as product}
-                <div class="flex items-center gap-3 p-3 bg-canvas rounded-xl border border-border-subtle hover:border-brand-green/30 transition-colors">
+                <div class="flex items-center gap-3 p-3 bg-canvas rounded-xl border border-border-subtle hover:border-brand-gold/30 transition-colors">
                   <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-surface to-border-subtle flex items-center justify-center shrink-0">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="3" y="3" width="10" height="10" rx="2" stroke="#667085" stroke-width="1.2"/></svg>
                   </div>
@@ -57,11 +57,11 @@
             </div>
             <div class="mt-5 pt-4 border-t border-border-subtle flex items-center gap-5">
               <div class="flex items-center gap-2">
-                <div class="w-2 h-2 rounded-full bg-brand-green"></div>
+                <div class="w-2 h-2 rounded-full bg-brand-gold"></div>
                 <span class="text-[11px] font-medium text-text-muted">Storefront live</span>
               </div>
               <div class="flex items-center gap-2">
-                <div class="w-2 h-2 rounded-full bg-sapphire"></div>
+                <div class="w-2 h-2 rounded-full bg-amber-700"></div>
                 <span class="text-[11px] font-medium text-text-muted">54 products</span>
               </div>
             </div>

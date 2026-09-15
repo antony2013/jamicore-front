@@ -1,4 +1,4 @@
-<script lang="ts">
+﻿<script lang="ts">
   import { onMount } from 'svelte';
 
   let visible = $state(false);
@@ -46,7 +46,7 @@
           <div class="flex gap-2">
             <div class="w-3 h-3 rounded-full bg-red-400/80"></div>
             <div class="w-3 h-3 rounded-full bg-amber-400/80"></div>
-            <div class="w-3 h-3 rounded-full bg-green-400/80"></div>
+            <div class="w-3 h-3 rounded-full bg-amber-400/80"></div>
           </div>
           <span class="text-[12px] font-semibold text-text-muted ml-3">Merchant Dashboard</span>
         </div>
@@ -56,7 +56,7 @@
               <button
                 onclick={() => activeTab = tab}
                 class="px-4 py-2 text-[13px] font-semibold rounded-full whitespace-nowrap transition-all
-                  {activeTab === tab ? 'bg-deep-navy text-white shadow-md' : 'bg-canvas text-text-muted hover:bg-surface border border-border-subtle'}"
+                  {activeTab === tab ? 'bg-deep-dark text-white shadow-md' : 'bg-canvas text-text-muted hover:bg-surface border border-border-subtle'}"
               >
                 {tab}
               </button>

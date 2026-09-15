@@ -1,4 +1,4 @@
-<script lang="ts">
+﻿<script lang="ts">
   import { onMount } from 'svelte';
 
   let visible = $state(false);
@@ -17,27 +17,27 @@
     {
       title: 'CONNECTED',
       desc: 'Keep related business workflows within the same ecosystem.',
-      gradient: 'from-blue-500 to-indigo-500'
+      gradient: 'from-amber-400 to-amber-600'
     },
     {
       title: 'PRACTICAL',
       desc: 'Focus on the operations businesses actually need to manage.',
-      gradient: 'from-brand-green to-emerald-500'
+      gradient: 'from-brand-gold to-amber-500'
     },
     {
       title: 'STRUCTURED',
       desc: 'Organize products, orders, customers, outlets, teams, and operations.',
-      gradient: 'from-violet to-purple-600'
+      gradient: 'from-amber-600 to-amber-800'
     },
     {
       title: 'FLEXIBLE',
       desc: 'Support different business models and workflows.',
-      gradient: 'from-amber-500 to-orange-500'
+      gradient: 'from-amber-500 to-amber-600'
     },
     {
       title: 'EVOLVING',
       desc: 'Create room for the platform to grow with the business.',
-      gradient: 'from-pink-500 to-rose-500'
+      gradient: 'from-amber-600 to-amber-800'
     }
   ];
 </script>

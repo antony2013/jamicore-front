@@ -1,4 +1,4 @@
-<script lang="ts">
+﻿<script lang="ts">
   import { onMount } from 'svelte';
 
   let visible = $state(false);
@@ -14,9 +14,9 @@
   });
 
   const activityItems = [
-    { action: 'Placed order #ORD-1042', time: '2 hours ago', color: 'bg-brand-green' },
-    { action: 'Visited Online Store', time: 'Yesterday', color: 'bg-sapphire' },
-    { action: 'Updated delivery address', time: '3 days ago', color: 'bg-violet' },
+    { action: 'Placed order #ORD-1042', time: '2 hours ago', color: 'bg-brand-gold' },
+    { action: 'Visited Online Store', time: 'Yesterday', color: 'bg-amber-700' },
+    { action: 'Updated delivery address', time: '3 days ago', color: 'bg-amber-600' },
     { action: 'Applied discount code', time: 'Last week', color: 'bg-amber-500' },
   ];
 </script>
@@ -31,7 +31,7 @@
           </div>
           <div class="product-ui-body">
             <div class="flex items-start gap-4 mb-6">
-              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-brand-green to-emerald-600 flex items-center justify-center shrink-0 shadow-lg shadow-brand-green/20">
+              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-brand-gold to-amber-600 flex items-center justify-center shrink-0 shadow-lg shadow-brand-gold/20">
                 <span class="text-[18px] font-bold text-white">SK</span>
               </div>
               <div>
@@ -85,9 +85,9 @@
         </p>
         <div class="flex items-center gap-3 text-[13px] text-text-muted">
           <span class="font-medium">Customer</span>
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M5 8h6M9 5l3 3-3 3" stroke="#008060" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M5 8h6M9 5l3 3-3 3" stroke="#B45309" stroke-width="1.5" stroke-linecap="round"/></svg>
           <span class="font-medium">Orders</span>
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M5 8h6M9 5l3 3-3 3" stroke="#008060" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M5 8h6M9 5l3 3-3 3" stroke="#B45309" stroke-width="1.5" stroke-linecap="round"/></svg>
           <span class="font-medium">Activity</span>
         </div>
       </div>

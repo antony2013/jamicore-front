@@ -1,25 +1,25 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-canvas: #FAFBFC;
-  --color-canvas-warm: #F8F9FB;
-  --color-surface: #F1F3F5;
+  --color-canvas: #FFFDF7;
+  --color-canvas-warm: #FFF9EB;
+  --color-surface: #F7F1E3;
   --color-surface-elevated: #FFFFFF;
-  --color-text-primary: #0C111D;
-  --color-text-secondary: #344054;
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #3D3D3D;
   --color-text-muted: #667085;
-  --color-border-subtle: #EAECF0;
-  --color-border-strong: #D0D5DD;
-  --color-brand-green: #008060;
-  --color-brand-green-light: #F0FDF9;
-  --color-brand-green-border: #A1F2D6;
-  --color-brand-accent: #9D7125;
-  --color-brand-accent-surface: #FFFBF5;
-  --color-brand-accent-border: #F3E8D0;
-  --color-deep-navy: #0C111D;
-  --color-sapphire: #2563EB;
-  --color-indigo: #5E6AD2;
-  --color-violet: #7C3AED;
+  --color-border-subtle: #F1E9D6;
+  --color-border-strong: #DCCFA8;
+  --color-brand-gold: #F5B21B;
+  --color-brand-gold-light: #FFFBEB;
+  --color-brand-gold-border: #FDE68A;
+  --color-brand-gold-dark: #B45309;
+  --color-brand-gold-surface: #FFF8E7;
+  --color-brand-gold-deep: #92400E;
+  --color-deep-dark: #222222;
+  --color-sapphire: #B45309;
+  --color-indigo: #D97706;
+  --color-violet: #8A6D2F;
 
   --font-display: 'Inter', system-ui, -apple-system, sans-serif;
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
@@ -47,8 +47,8 @@
   }
 
   ::selection {
-    background-color: #D1FAE5;
-    color: #065F46;
+    background-color: #FDE68A;
+    color: #92400E;
   }
 
   [dir="rtl"] {
@@ -63,7 +63,7 @@
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--color-brand-green);
+color: var(--color-brand-gold-dark);
   }
 
   .heading-display {
@@ -114,8 +114,8 @@
     justify-content: center;
     gap: 8px;
     padding: 14px 28px;
-    background-color: var(--color-brand-green);
-    color: #FFFFFF;
+    background-color: var(--color-brand-gold);
+    color: var(--color-deep-dark);
     font-family: var(--font-body);
     font-size: 15px;
     font-weight: 600;
@@ -127,8 +127,8 @@
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   }
   .btn-primary:hover {
-    background-color: #006E52;
-    box-shadow: 0 4px 12px rgba(0, 128, 96, 0.25);
+    background-color: #E0A30E;
+    box-shadow: 0 4px 12px rgba(245, 178, 27, 0.35);
     transform: translateY(-1px);
   }
 
@@ -254,9 +254,9 @@
     display: inline-flex;
     align-items: center;
     padding: 4px 12px;
-    background-color: #ECFDF5;
-    color: #047857;
-    border: 1px solid #A7F3D0;
+    background-color: var(--color-brand-gold-surface);
+    color: var(--color-brand-gold-dark);
+    border: 1px solid var(--color-brand-gold-border);
     border-radius: 9999px;
     font-family: var(--font-body);
     font-size: 12px;
@@ -267,9 +267,9 @@
     display: inline-flex;
     align-items: center;
     padding: 4px 12px;
-    background-color: var(--color-brand-accent-surface);
-    color: var(--color-brand-accent);
-    border: 1px solid var(--color-brand-accent-border);
+    background-color: var(--color-brand-gold-surface);
+    color: var(--color-brand-gold-dark);
+    border: 1px solid var(--color-brand-gold-border);
     border-radius: 9999px;
     font-family: var(--font-body);
     font-size: 12px;
@@ -287,14 +287,14 @@
   }
 
   .gradient-hero {
-    background: linear-gradient(135deg, #ECFDF5 0%, #F0F9FF 50%, #FAF5FF 100%);
+    background: linear-gradient(135deg, #FFFBEB 0%, #FFF4D6 50%, #FFFDF7 100%);
   }
 
   .gradient-mesh {
     background:
-      radial-gradient(at 20% 80%, rgba(0, 128, 96, 0.08) 0%, transparent 50%),
-      radial-gradient(at 80% 20%, rgba(37, 99, 235, 0.06) 0%, transparent 50%),
-      radial-gradient(at 50% 50%, rgba(124, 58, 237, 0.04) 0%, transparent 50%);
+      radial-gradient(at 20% 80%, rgba(245, 178, 27, 0.12) 0%, transparent 50%),
+      radial-gradient(at 80% 20%, rgba(180, 83, 9, 0.08) 0%, transparent 50%),
+      radial-gradient(at 50% 50%, rgba(138, 109, 47, 0.05) 0%, transparent 50%);
   }
 
   .glass-card {

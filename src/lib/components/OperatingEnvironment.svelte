@@ -1,4 +1,4 @@
-<script lang="ts">
+﻿<script lang="ts">
   import { onMount } from 'svelte';
 
   let visible = $state(false);
@@ -14,12 +14,12 @@
   });
 
   const modules = [
-    { num: '01', title: 'Online Store', desc: 'Sell online and manage your customer-facing commerce experience.', color: 'from-blue-500 to-blue-600', iconColor: 'text-blue-500' },
-    { num: '02', title: 'POS', desc: 'Handle everyday selling from a focused point-of-sale experience.', color: 'from-violet-500 to-purple-600', iconColor: 'text-violet-500' },
-    { num: '03', title: 'Orders', desc: 'Keep orders connected to the workflows around them.', color: 'from-amber-500 to-orange-500', iconColor: 'text-amber-500' },
-    { num: '04', title: 'Customers', desc: 'Keep customer information connected to business activity.', color: 'from-pink-500 to-rose-500', iconColor: 'text-pink-500' },
-    { num: '05', title: 'Inventory', desc: 'Manage products, stock, and inventory workflows.', color: 'from-teal-500 to-emerald-500', iconColor: 'text-teal-500' },
-    { num: '06', title: 'Restaurant', desc: 'Connect menus, tables, food orders, and kitchen workflows.', color: 'from-brand-green to-emerald-600', iconColor: 'text-brand-green' }
+    { num: '01', title: 'Online Store', desc: 'Sell online and manage your customer-facing commerce experience.', color: 'from-amber-400 to-amber-600', iconColor: 'text-amber-700' },
+    { num: '02', title: 'POS', desc: 'Handle everyday selling from a focused point-of-sale experience.', color: 'from-amber-600 to-amber-800', iconColor: 'text-amber-700' },
+    { num: '03', title: 'Orders', desc: 'Keep orders connected to the workflows around them.', color: 'from-amber-500 to-amber-600', iconColor: 'text-amber-500' },
+    { num: '04', title: 'Customers', desc: 'Keep customer information connected to business activity.', color: 'from-amber-600 to-amber-800', iconColor: 'text-amber-700' },
+    { num: '05', title: 'Inventory', desc: 'Manage products, stock, and inventory workflows.', color: 'from-amber-500 to-amber-500', iconColor: 'text-amber-600' },
+    { num: '06', title: 'Restaurant', desc: 'Connect menus, tables, food orders, and kitchen workflows.', color: 'from-brand-gold to-amber-600', iconColor: 'text-brand-gold' }
   ];
 </script>
 

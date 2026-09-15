@@ -13,6 +13,7 @@
   import HowItWorks from '$lib/components/HowItWorks.svelte';
   import Solutions from '$lib/components/Solutions.svelte';
   import Resources from '$lib/components/Resources.svelte';
+  import RequestForm from '$lib/components/RequestForm.svelte';
   import FinalCTA from '$lib/components/FinalCTA.svelte';
   import Footer from '$lib/components/Footer.svelte';
 </script>
@@ -41,6 +42,7 @@
   <HowItWorks />
   <Solutions />
   <Resources />
+  <RequestForm />
   <FinalCTA />
 </main>
 

@@ -1,4 +1,4 @@
-<script lang="ts">
+﻿<script lang="ts">
   import { onMount } from 'svelte';
 
   let visible = $state(false);
@@ -14,10 +14,10 @@
   });
 
   const resources = [
-    { tag: 'Guide', title: 'Why connected business software matters as you grow', gradient: 'from-brand-green to-emerald-500' },
-    { tag: 'Product', title: 'Introducing the new Merchant Dashboard', gradient: 'from-blue-500 to-indigo-500' },
-    { tag: 'Ecommerce', title: 'Building your first online store with JamiCore', gradient: 'from-violet to-purple-600' },
-    { tag: 'Restaurant', title: 'From kitchen to customer: connected restaurant workflows', gradient: 'from-amber-500 to-orange-500' },
+    { tag: 'Guide', title: 'Why connected business software matters as you grow', gradient: 'from-brand-gold to-amber-500' },
+    { tag: 'Product', title: 'Introducing the new Merchant Dashboard', gradient: 'from-amber-400 to-amber-600' },
+    { tag: 'Ecommerce', title: 'Building your first online store with JamiCore', gradient: 'from-amber-600 to-amber-800' },
+    { tag: 'Restaurant', title: 'From kitchen to customer: connected restaurant workflows', gradient: 'from-amber-500 to-amber-600' },
   ];
 
   const categories = ['Guides', 'Product Education', 'Ecommerce', 'Retail', 'Restaurants', 'Comparisons'];
@@ -35,7 +35,7 @@
 
     <div class="flex flex-wrap gap-2 mb-10 {visible ? 'fade-in visible' : 'fade-in'}" style="transition-delay: 0.08s">
       {#each categories as cat}
-        <span class="px-4 py-2 bg-white rounded-full border border-border-subtle text-[13px] font-semibold text-text-muted hover:border-brand-green hover:text-brand-green hover:bg-brand-green/5 cursor-pointer transition-all">{cat}</span>
+        <span class="px-4 py-2 bg-white rounded-full border border-border-subtle text-[13px] font-semibold text-text-muted hover:border-brand-gold hover:text-brand-gold hover:bg-brand-gold/5 cursor-pointer transition-all">{cat}</span>
       {/each}
     </div>
 
@@ -45,8 +45,8 @@
           <div class="w-10 h-10 rounded-xl bg-gradient-to-br {r.gradient} flex items-center justify-center mb-4 shadow-md group-hover:scale-110 transition-transform duration-300">
             <span class="text-[10px] font-bold text-white uppercase">{r.tag.slice(0, 2)}</span>
           </div>
-          <h3 class="text-[16px] font-bold text-text-primary group-hover:text-brand-green transition-colors">{r.title}</h3>
-          <div class="mt-4 flex items-center gap-1.5 text-[13px] font-semibold text-brand-green">
+          <h3 class="text-[16px] font-bold text-text-primary group-hover:text-brand-gold transition-colors">{r.title}</h3>
+          <div class="mt-4 flex items-center gap-1.5 text-[13px] font-semibold text-brand-gold">
             Read article
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
           </div>

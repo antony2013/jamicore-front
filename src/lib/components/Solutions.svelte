@@ -1,4 +1,4 @@
-<script lang="ts">
+﻿<script lang="ts">
   import { onMount } from 'svelte';
 
   let visible = $state(false);
@@ -14,11 +14,11 @@
   });
 
   const solutions = [
-    { title: 'Ecommerce', desc: 'Manage your online store, products, and customer experience from one connected platform.', gradient: 'from-blue-500 to-indigo-500' },
-    { title: 'Retail', desc: 'Connect in-store operations with online commerce and customer data.', gradient: 'from-brand-green to-emerald-500' },
-    { title: 'Restaurants', desc: 'Connect menus, tables, orders, kitchen workflows, and customer service.', gradient: 'from-amber-500 to-orange-500' },
-    { title: 'Multi-outlet Businesses', desc: 'Manage multiple locations from a single connected platform.', gradient: 'from-violet to-purple-600' },
-    { title: 'Growing Businesses', desc: 'Bring additional workflows into the same foundation as you scale.', gradient: 'from-pink-500 to-rose-500' }
+    { title: 'Ecommerce', desc: 'Manage your online store, products, and customer experience from one connected platform.', gradient: 'from-amber-400 to-amber-600' },
+    { title: 'Retail', desc: 'Connect in-store operations with online commerce and customer data.', gradient: 'from-brand-gold to-amber-500' },
+    { title: 'Restaurants', desc: 'Connect menus, tables, orders, kitchen workflows, and customer service.', gradient: 'from-amber-500 to-amber-600' },
+    { title: 'Multi-outlet Businesses', desc: 'Manage multiple locations from a single connected platform.', gradient: 'from-amber-600 to-amber-800' },
+    { title: 'Growing Businesses', desc: 'Bring additional workflows into the same foundation as you scale.', gradient: 'from-amber-600 to-amber-800' }
   ];
 </script>
 
@@ -46,7 +46,7 @@
           </div>
           <h3 class="text-[17px] font-bold text-text-primary mb-2">{s.title}</h3>
           <p class="text-[14px] text-text-muted leading-relaxed mb-4">{s.desc}</p>
-          <span class="text-[13px] font-semibold text-brand-green flex items-center gap-1 group-hover:gap-2 transition-all">
+          <span class="text-[13px] font-semibold text-brand-gold flex items-center gap-1 group-hover:gap-2 transition-all">
             Explore
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4.5 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
           </span>
